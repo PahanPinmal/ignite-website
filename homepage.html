@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Sri Lanka</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background-color: gray;
+            font-family: "Inter", sans-serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .color-overlay {
+            background: rgba(120, 20, 20, 0.25);
+            animation: colorShift 16s infinite;
+        }
+
+        @keyframes colorShift {
+            0% {
+                background: rgba(120, 20, 20, 0.25);
+            }
+
+            25% {
+                background: rgba(150, 80, 20, 0.25);
+            }
+
+            50% {
+                background: rgba(150, 130, 20, 0.25);
+            }
+
+            75% {
+                background: rgba(20, 100, 20, 0.28);
+            }
+
+            100% {
+                background: rgba(120, 20, 20, 0.25);
+            }
+        }
+
+        .glow {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .count {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* ✅ ADDED ONLY */
+        .fade-section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* IMPACT */
+        .impact-circle {
+            width: 140px;
+            /* increased size */
+            height: 140px;
+            border-radius: 50%;
+            border: 2.5px solid;
+            /* slightly thinner = cleaner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            /* more spacing below */
+
+            background: rgba(255, 255, 255, 0.04);
+            /* softer glass look */
+
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        /* inner soft layer */
+        .impact-circle::after {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.02);
+            /* reduced brightness */
+        }
+
+        /* pulse ring (cleaner + slower) */
+        .impact-circle::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1.5px solid currentColor;
+            opacity: 0.25;
+            animation: pulse 3.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            70% {
+                transform: scale(1.35);
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* hover (more premium, less aggressive) */
+        .impact-circle:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 18px currentColor;
+        }
+    </style>
+</head>
+
+<body class="text-black">
+
+    <!-- HERO -->
+    <section class="relative h-screen overflow-hidden">
+
+        <img src="homebg.jpg" class="absolute w-full h-full object-cover grayscale scale-110 transition duration-[10s]">
+
+        <div class="absolute w-full h-full bg-black/70"></div>
+
+        <div class="absolute w-full h-full color-overlay"></div>
+
+        <nav class="absolute top-4 w-full z-20">
+            <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+
+                <h1 class="text-lg font-semibold"></h1>
+
+
+
+            </div>
+        </nav>
+
+        <!-- ✅ UNCHANGED HERO CONTENT -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 fade-in text-white">
+
+
+            <div class="absolute top-6 w-full flex justify-between px-10 z-10">
+                <img src="logo.png" class="h-20 md:h-24">
+                <img src="RACUOKW.png" class="h-16 md:h-20">
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold mb-12 glow">
+                Ignite ஸ்ரீ ලංකා
+            </h1>
+
+            <p class="text-gray-200 text-sm md:text-base max-w-3xl leading-relaxed mb-12 glow">
+                Ignite Sri Lanka is a project initiated with the purpose of "developing a chosen village through six key
+                sectors with sustainability".
+
+                The initiative focuses on long-term impact by addressing critical areas collaborating with local
+                stakeholders, organizations, and volunteers, the project aims to create self-sufficient communities,
+                improve living standards, and provide future-oriented opportunities for villagers, ensuring continuous
+                growth even beyond the project’s duration.
+            </p>
+
+            <a href="years.html">
+                <button class="border border-white px-7 py-3 rounded-full text-sm 
+        hover:bg-white hover:text-black transition duration-300 hover:scale-105">
+                    Explore the Years of Services
+                </button>
+            </a>
+
+        </div>
+
+        <div class="absolute bottom-0 w-full h-56 bg-gradient-to-b from-transparent via-black/70 to-black"></div>
+
+    </section>
+
+
+    <!-- IMPACT -->
+    <section class="py-20 bg-black text-center fade-section text-white">
+        <h1 class="text-white mb-16 uppercase text-sm tracking-widest mb-4 glow">
+            Transforming Communities
+        </h1>
+
+        <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed mb-14">
+            Every project we undertake is a step toward uplifting communities and creating opportunities for those in
+            need.
+            Our journey is defined by meaningful change, driven by passion, collaboration, and purpose.
+        </p>
+
+        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+
+            <!-- RED -->
+            <div>
+                <div class="impact-circle border-red-400 text-red-300">
+                    <h6 class="count text-2xl font-semibold" data-target="12">0</h6>
+                </div>
+                <p class="text-sm text-white mt-4 glow">Projects</p>
+            </div>
+
+            <!-- YELLOW -->
+            <div>
+                <div class="impact-circle border-yellow-400 text-yellow-300">
+                    <h6 class="count text-2xl font-semibold" data-target="2000">0</h6>
+                </div>
+                <p class="text-sm text-white mt-4">Beneficiaries</p>
+            </div>
+
+            <!-- GREEN -->
+            <div>
+                <div class="impact-circle border-green-400 text-green-300">
+                    <h6 class="count text-2xl font-semibold" data-target="20">0</h6>
+                </div>
+                <p class="text-sm text-white mt-4">Sponsors</p>
+            </div>
+
+            <!-- ORANGE -->
+            <div>
+                <div class="impact-circle border-orange-400 text-orange-300">
+                    <h6 class="count text-2xl font-semibold" data-target="3">0</h6>
+                </div>
+                <p class="text-sm text-white mt-4">Years</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LEADERSHIP TITLE -->
+    <section class="py-16 bg-gray-50 text-center fade-section border-t border-gray-200">
+
+        <div class="max-w-3xl mx-auto px-6">
+
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 tracking-wide">
+                From Those Who Lead the Change
+            </h2>
+
+            <!-- subtle divider -->
+            <div class="w-16 h-[2px] bg-gray-300 mx-auto mb-6"></div>
+
+            <p class="text-gray-500 text-sm md:text-base leading-relaxed">
+                Hear from the leaders who drive Ignite Sri Lanka forward, shaping vision into action
+                and creating meaningful impact within communities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRESIDENT -->
+    <section class="py-20 bg-gray-50 fade-section">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6 items-center">
+
+            <div class="flex flex-col items-center text-center">
+                <img src="president.PNG" class="rounded-xl shadow">
+                <p class="mt-3 font-semibold text-sm">President</p>
+                <p class="text-xs text-gray-500">(2025-2026)</p>
+            </div>
+
+            <div class="flex flex-col justify-center h-full items-start text-left">
+                <h2 class="text-2xl font-semibold mb-4">Rtn. Rtr. Himantha Sayuru</h2>
+                <p class="text-gray-600 max-w-xl text-justify">
+                    From empowering local communities through education and healthcare projects to
+                    championing environmental sustainability and social welfare through innovative initiaves, our
+                    dedication to making a positive difference has never wavered. Some of our stellar award-winning
+                    projects, where creativity and impact unite to redefine excellence include ‘Writing Maze’,
+                    Spectrum’, ‘RotaTomorrow’ and ‘Track the Spread’.
+
+                    A driving force behind our achievements has been our strong and enthusiastic membership base. The
+                    dedication and determination of our members have enabled us to dream big and turn our aspirations
+                    into tangible reality. We take immense pride in nurturing and developing future leaders among
+                    thousands of undergraduates who find a sense of purpose and fulfillment through our club.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECRETARY -->
+    <section class="py-20 bg-gray-50 fade-section">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6 items-center">
+
+            <div class="flex flex-col justify-center h-full items-end text-right">
+                <h2 class="text-2xl font-semibold mb-4">Rtn. Rtr. Vihanga Divyanjana</h2>
+                <p class="text-gray-600 max-w-xl text-justify">
+                    From empowering local communities through education and healthcare projects to
+                    championing environmental sustainability and social welfare through innovative initiaves, our
+                    dedication to making a positive difference has never wavered. Some of our stellar award-winning
+                    projects, where creativity and impact unite to redefine excellence include ‘Writing Maze’,
+                    Spectrum’, ‘RotaTomorrow’ and ‘Track the Spread’.
+
+                    A driving force behind our achievements has been our strong and enthusiastic membership base. The
+                    dedication and determination of our members have enabled us to dream big and turn our aspirations
+                    into tangible reality. We take immense pride in nurturing and developing future leaders among
+                    thousands of undergraduates who find a sense of purpose and fulfillment through our club.
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center text-center">
+                <img src="IPP.JPG" class="rounded-xl shadow">
+                <p class="mt-3 font-semibold text-sm">President</p>
+                <p class="text-xs text-gray-500">(2024-2025)</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ✅ YOUR FOOTER 100% UNCHANGED -->
+    <footer class="bg-white border-t border-gray-300 pt-16 pb-8 px-6 ">
+
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10 text-sm text-gray-600 ">
+
+            <div>
+                <h3 class="text-black mb-4 font-semibold">Ignite Sri Lanka</h3>
+                <p>Community development initiative by RACUOK.</p>
+            </div>
+
+            <div>
+                <h3 class="text-black mb-4 font-semibold">Links</h3>
+                <ul class="space-y-2">
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Sponsors</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-black mb-4 font-semibold">Contact</h3>
+                <p>ignite@racuok.lk</p>
+            </div>
+
+            <div>
+                <h3 class="text-black mb-4 font-semibold">Social</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- EXISTING SCRIPT -->
+    <script>
+        const counters = document.querySelectorAll('.count');
+
+        const counterObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    counters.forEach(counter => {
+
+                        // prevent running again
+                        if (counter.classList.contains("done")) return;
+                        counter.classList.add("done");
+
+                        let target = +counter.getAttribute('data-target');
+                        let count = 0;
+
+                        let update = () => {
+                            let increment = target / 100;
+
+                            count += increment;
+
+                            if (count < target) {
+                                counter.innerText = Math.floor(count) + "+";
+                                requestAnimationFrame(update);
+                            } else {
+                                counter.innerText = target + "+";
+                            }
+                        };
+
+                        update();
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counterObserver.observe(document.querySelector('.count'));
+    </script>
+
+
+    <!-- FADE-IN ANIMATION (UNCHANGED BUT OPTIMIZED) -->
+    <script>
+        const fadeSections = document.querySelectorAll('.fade-section');
+
+        const fadeObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeSections.forEach(sec => fadeObserver.observe(sec));
+    </script>
+
+</body>
+
+</html>

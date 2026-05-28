@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ignite Sri Lanka 2.0</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* HERO SLIDER */
+        .hero-slider {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        /* DARK SECTIONS */
+        .dark-red {
+            background: #3a0d0d;
+        }
+
+        .dark-green {
+            background: #0f2e1f;
+        }
+
+        .dark-yellow {
+            background: #4a3b0f;
+        }
+
+        .dark-orange {
+            background: #4a1f0f;
+        }
+
+        .section-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- HERO IMAGE FIRST -->
+    <section class="hero-slider">
+
+        <!-- IMAGES -->
+        <img src="2MI1.jpeg" class="hero-slide active">
+        <img src="2MI2.jpeg" class="hero-slide">
+        <img src="2MI3.jpeg" class="hero-slide">
+
+        <!-- DARK OVERLAY -->
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+        <!-- WHITE FADE -->
+        <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-transparent z-20"></div>
+
+        <!-- CONTENT -->
+        <div class="absolute inset-0 z-30 flex flex-col items-center justify-center text-center px-6">
+
+            <!-- LOGOS -->
+            <div class="absolute top-6 w-full flex justify-between px-6">
+                <img src="logo.png" class="h-20 md:h-24">
+                <img src="RACUOKB.png" class="h-16 md:h-20">
+            </div>
+
+            <div class="bg-white/50 backdrop-blur-sm px-8 py-6 rounded-xl">
+
+                <!-- TITLE -->
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-black drop-shadow-lg">
+                    Ignite Sri Lanka 2.0
+                </h1>
+
+                <!-- PARAGRAPH -->
+                <p class="max-w-3xl text-gray-900 drop-shadow-md ...">
+                    Project "Ignite ஸ்ரீ ලංකා 2.0" is an initiative of the Community Service Avenue of Rotaract Club of
+                    University of Kelaniya, aimed at uplifting the quality of life for the community in the
+                    Hanguranketha,
+                    focusing on "Dampola" and "Hapuwala" villages located in the Nuwara Eliya District.
+                    Hanguranketha Village is an underprivileged rural area lacking sufficient facilities. The project is
+                    designed to address critical areas such as Infrastructure, Economy & Entrepreneurship, Education,
+                    Health
+                    & Sanitation, Agriculture & Tourism, and Women & Youth empowerment aiming to uplift the community by
+                    focusing on these key sectors. Through different projects focusing on each sector mentioned above,
+                    the
+                    project aims at developing the distinguished sectors, which will lead to a significant development
+                    in
+                    the overall society that will create a sustainable change in the lives of the people of
+                    Hanguranketha.
+                </p>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- SECTION 1 -->
+    <section class="dark-red text-white py-16">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Infrastructure Sector</h2>
+                <p>
+                    We have focused on key infrastructure development initiatives in Dampola village. As part of this
+                    effort, we successfully installed a plumbing system at Hapuwala Junior School, ensuring students
+                    have access to clean and safe running water.
+
+                    In addition, we conducted research in Delthota village in the Kandy District, which has been
+                    severely affected by the Ditwah Cyclone. As a result of the damage to the RO plant and the village’s
+                    plumbing system, over 450 families are currently unable to access clean water.
+
+                    Through this initiative, we aim to support both villages by improving water accessibility and
+                    rebuilding essential infrastructure, ultimately enhancing the quality of life for the communities.
+                </p>
+            </div>
+
+            <img src="infra.jpeg" class="section-img">
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 2 -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+
+            <img src="agri.jpeg" class="section-img">
+
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Agriculture and Tourism sector</h2>
+                <p>
+                    The agriculture and tourism sector in Hapuwala presents a valuable opportunity to enhance local
+                    livelihoods by combining sustainable farming practices with the promotion of rural tourism. However,
+                    challenges such as limited income opportunities and underutilized tourism potential continue to
+                    hinder the community’s growth.
+
+                    This project addressed these gaps by promoting the village’s tourism potential through social media
+                    platforms, and influencers encouraging greater visibility and visitor engagement. In addition,
+                    coconut plants were distributed to farmers to support long-term agricultural income, alongside an
+                    awareness session focused on creating additional income streams for farmers.
+
+                    These initiatives aim to empower the community with practical resources and knowledge, contributing
+                    to improved livelihoods, strengthened rural tourism, and sustainable economic development in
+                    Hapuwala.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 3 -->
+    <section class="dark-green text-white py-16">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Education Sector</h2>
+                <p>
+                    "Education is the most powerful weapon which you can use to change the world." — Nelson Mandela
+
+                    Education plays a vital role in shaping the future of a nation. Through Project Ignite Sri Lanka
+                    2.0, we have focused on uplifting two rural schools in Hanguranketha: Hapuwala Junior School, with
+                    167 students, and Gannewa Junior School, with 62 students.
+
+                    At Gannewa Junior School, we donated library books worth Rs. 20,000 along with stationery packs for
+                    every student, supporting their learning needs and encouraging reading habits.
+
+                    At Hapuwala Junior School, we installed a new name board and carried out a complete repainting of
+                    the school, creating a more pleasant and motivating learning environment for the students—something
+                    that had not been done since the school’s establishment.
+                </p>
+            </div>
+
+            <img src="education.jpeg" class="section-img">
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 4 -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+
+            <img src="health.jpeg" class="section-img">
+
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Health & Sanitation Sector</h2>
+                <p>
+                    Under the Health & Sanitation Sector, our objective is to improve the overall health and well-being
+                    of the villagers in Hanguranketha.
+
+                    In Phase 1, we collaborated with Asiri Hospitals in Kandy to provide essential health screenings,
+                    including blood sugar testing, blood pressure checks, and BMI assessments. Additionally, we
+                    partnered with Vidunetha Opticals to conduct eye chek-ups for villagers and distributed free
+                    spectacles to those with vision impairments.
+
+                    For the phase 2, we are focusing on improving sanitation facilities in local schools. We are
+                    currently rebuilding the washrooms at Hapuwala Junior School and planning to construct a new
+                    washroom at Gannewa Junior School to ensure better hygiene and sanitation for students.
+
+                    Through these initiatives, we aim to promote healthier lifestyles and create a safer, more sanitary
+                    environment for the community, especially for schoolchildren.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 5 -->
+    <section class="dark-yellow text-white py-16">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Women & Youth Empowerment Sector</h2>
+                <p>
+                    In this sector, we aim to empower pregnant women and the youth community in the Hanguranketha area
+                    by providing both financial support and future-oriented opportunities.
+
+                    As part of this initiative, we conducted a Vocational Training Workshop in collaboration with the
+                    Vocational Training Authority for over 60 students preparing for their O/L examinations at Hapuwala
+                    Junior School and Gannewa Junior School. This program was designed to guide students toward
+                    productive career pathways and help them make effective use of their time while planning their
+                    futures.
+
+                    In addition, we distributed baby essential kits to 18 pregnant mothers in the Dampola and Hapuwala
+                    villages, offering financial relief and support during early motherhood.
+
+                    Furthermore, we are providing scholarships to students who are passionate about pursuing
+                    career-oriented courses, enabling them to complete their education without financial barriers and
+                    build a stable future.
+
+                    Through these efforts, we strive to uplift both women and youth by creating opportunities for
+                    growth, stability, and long-term success.
+                </p>
+            </div>
+
+            <img src="women.jpeg" class="section-img">
+
+        </div>
+    </section>
+
+
+    <!-- SECTION 6 -->
+    <section class="bg-white py-16">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 px-6 items-center">
+
+            <img src="economic.jpg" class="section-img">
+
+            <div>
+                <h2 class="text-xl font-semibold mb-4">Economy & Entrepreneurship Sector</h2>
+                <p>
+                    Under the Economy & Entrepreneurship sector, our primary goal is to create sustainable income
+                    opportunities for the selected village. In this sector, we are promoting high-value crops such as
+                    pepper and coffee, which offer strong market potential and multiple income-generating avenues.
+
+                    Rather than limiting farmers to selling raw products, we encourage value addition through
+                    innovations such as bottled ground coffee and packaged ground pepper. With improved processing and
+                    attractive packaging, these products can achieve higher market value and significantly increase
+                    earnings.
+
+                    We are also raising awareness among villagers about these opportunities, equipping them with the
+                    knowledge to transform their agricultural outputs into profitable ventures.
+
+                    This initiative is expected to benefit more than one hundred families by diversifying their income
+                    sources and enhancing their overall standard of living.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- SLIDER SCRIPT -->
+    <script>
+        let slides = document.querySelectorAll(".hero-slide");
+        let index = 0;
+
+        setInterval(() => {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }, 3000);
+    </script>
+
+</body>
+
+</html>
